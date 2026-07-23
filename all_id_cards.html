@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee ID Cards - Pixel Perfect Alignment</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0;
+  gap: 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "Montserrat", sans-serif;
+}
+
+.person-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.person-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F172A;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-side-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   EXACT 156.24px x 241px ID CARD CONTAINER
+   Width: 156.24px | Height: 241px
+   Scale: 156.24 / 510 = 0.30635294, 241 / 768 = 0.31380208
+   ========================================================= */
+
+.f-frame1-43612 { 
+  position: relative; 
+  width: 156.24px; 
+  height: 241px; 
+  box-sizing: border-box; 
+  background: transparent; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  border-radius: 8px; 
+  box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.22); 
+}
+
+.f-mainidcardwrapper-435638 { 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  width: 510px; 
+  height: 768px; 
+  transform: scale(0.30635294, 0.31380208);
+  transform-origin: 0 0;
+  box-sizing: border-box; 
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.0625); 
+  background: url('id card design/background.jpg') no-repeat center center / cover, linear-gradient(rgba(249, 250, 248, 1), rgba(249, 250, 248, 1)); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  overflow: hidden; 
+}
+
+/* Top Punch Notch */
+.f-topnotchdesignmargin-435639 { 
+  position: relative; 
+  width: 510px; 
+  height: 44px; 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 20px 205px 0px 205px; 
+  z-index: 10; 
+}
+.f-topnotchdesign-435640 { 
+  position: relative; 
+  width: 100px; 
+  height: 24px; 
+  box-sizing: border-box; 
+  background: linear-gradient(rgba(85, 85, 85, 1), rgba(85, 85, 85, 1)); 
+  border-radius: 12px; 
+}
+
+/* Header Branding */
+.f-headerbranding-435647 { 
+  position: relative; 
+  align-self: stretch; 
+  width: 100%; 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  align-items: center; 
+  padding: 35px 40px 0px 40px; 
+  z-index: 10; 
+}
+.f-container-435648 { position: relative; box-sizing: border-box; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; }
+.f-container-435649 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-text-435650 { 
+  position: relative; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  flex-direction: column; 
+  white-space: nowrap; 
+  overflow: visible; 
+  font-size: 48px; 
+  line-height: 48px; 
+  letter-spacing: -2.4px; 
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+  color: rgba(0, 166, 81, 1); 
+  text-align: left; 
+  align-items: flex-start; 
+  justify-content: center; 
+}
+.f-margin-435651 { position: relative; width: 34px; height: 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 0px 16px 0px 16px; }
+.f-verticaldivider-435652 { position: relative; width: 2px; height: 40px; box-sizing: border-box; background: linear-gradient(rgba(156, 163, 175, 1), rgba(156, 163, 175, 1)); }
+.f-container-435653 { position: relative; width: 135px; height: 28px; box-sizing: border-box; }
+.f-text-435654 { 
+  position: absolute; 
+  left: 0px; 
+  top: -0.62px; 
+  width: auto; 
+  height: auto; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  flex-direction: column; 
+  white-space: nowrap; 
+  overflow: visible; 
+  font-size: 11px; 
+  line-height: 13.75px; 
+  text-transform: uppercase; 
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+  color: rgba(31, 41, 55, 1); 
+  text-align: left; 
+  align-items: flex-start; 
+  justify-content: center; 
+}
+
+/* Background Top-Right Wave Pattern */
+.f-toprightwaves {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 250px;
+  height: 420px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+/* Portrait Image Area & Person Photo Fade */
+.f-portraitimagearea-435655 { 
+  position: relative; 
+  align-self: stretch; 
+  flex: 1; 
+  width: 100%; 
+  height: 100%; 
+  box-sizing: border-box; 
+}
+.f-person-photo-img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 365px;
+  max-width: 320px;
+  object-fit: contain;
+  object-position: bottom right;
+  z-index: 2;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 98%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, 0) 98%);
+}
+
+/* Green Name Badge Overlay */
+.f-namebadgeoverlay-435657 { 
+  position: absolute; 
+  left: 39px; 
+  top: 209px; 
+  width: 280px; 
+  height: 129px; 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  z-index: 5; 
+}
+.f-background-435658 { 
+  position: relative; 
+  width: 140px; 
+  height: 30px; 
+  box-sizing: border-box; 
+  background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); 
+  border-radius: 12px 12px 0px 0px; 
+}
+.f-background-435659 { 
+  position: relative; 
+  box-sizing: border-box; 
+  background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); 
+  border-radius: 0px 20px 20px 0px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  padding: 12px 24px 12px 24px; 
+  min-width: 250px; 
+}
+.f-heading1faisalkuttukkan-435660 { 
+  position: relative; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  flex-direction: column; 
+  white-space: nowrap; 
+  overflow: visible; 
+  font-size: 30px; 
+  line-height: 37.5px; 
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+  color: rgba(255, 255, 255, 1); 
+  text-align: left; 
+  align-items: flex-start; 
+  justify-content: center; 
+}
+
+/* Footer Details Section */
+.f-footerdetailssection-435661 { 
+  position: relative; 
+  align-self: stretch; 
+  width: 100%; 
+  box-sizing: border-box; 
+  background: transparent; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  gap: 14px; 
+  padding: 20px 40px 35px 40px; 
+  z-index: 6; 
+  margin-top: auto; 
+}
+.f-jobtitle-435662 { position: relative; align-self: stretch; width: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-businessdevelopmentmanager-435663 { 
+  position: relative; 
+  align-self: stretch; 
+  width: 100%; 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  flex-direction: column; 
+  white-space: pre-wrap; 
+  word-break: normal; 
+  overflow: visible; 
+  font-size: 15px; 
+  line-height: 24px; 
+  letter-spacing: 1.5px; 
+  font-family: "Montserrat", sans-serif; 
+  font-weight: 700; 
+  color: rgba(0, 0, 0, 1); 
+  text-align: left; 
+  align-items: flex-start; 
+  justify-content: center; 
+  text-transform: uppercase; 
+}
+
+.f-companylogoname-435664 { position: relative; align-self: stretch; width: 100%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; }
+.f-margin-435665 { position: relative; width: 40px; height: 32px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 0px 8px 0px 0px; }
+.f-background-435666 { position: relative; width: 32px; height: 32px; box-sizing: border-box; background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); border-radius: 8px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.f-svg-435667 { position: relative; width: 20px; height: 20px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.f-container-435669 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-text-435670 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: nowrap; overflow: visible; font-size: 18px; line-height: 28px; letter-spacing: 0.5px; font-family: "Montserrat", sans-serif; font-weight: 800; color: rgba(0, 0, 0, 1); text-align: left; align-items: flex-start; justify-content: center; text-transform: uppercase; }
+
+.f-frame2-43613 { position: relative; align-self: stretch; width: 100%; height: 135px; box-sizing: border-box; }
+.f-contactinfogrid-435671 { position: absolute; left: 0px; top: 0px; width: 430px; height: 135px; box-sizing: border-box; display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 16px; padding: 4px 0px 0px 0px; }
+
+.f-leftcolumndigitalphone-435672 { position: relative; flex: 1.1; width: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; }
+.f-email-435673 { position: relative; align-self: stretch; width: 100%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; gap: 8px; }
+.f-background-435674 { position: relative; width: 24px; height: 24px; box-sizing: border-box; background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); border-radius: 9999px; display: flex; flex-direction: row; justify-content: center; align-items: center; flex-shrink: 0; }
+.f-svg-435675 { position: relative; width: 14px; height: 14px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.f-container-435677 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-text-435678 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: nowrap; overflow: visible; font-size: 12px; line-height: 16px; font-family: "Montserrat", sans-serif; font-weight: 500; color: rgba(55, 65, 81, 1); text-align: left; align-items: flex-start; justify-content: center; }
+
+.f-web-435679 { position: relative; align-self: stretch; width: 100%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 8px; }
+.f-margin-435680 { position: relative; width: 24px; height: 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 1px 0px 0px 0px; flex-shrink: 0; }
+.f-background-435681 { position: relative; width: 24px; height: 24px; box-sizing: border-box; background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); border-radius: 9999px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.f-svg-435682 { position: relative; width: 14px; height: 14px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.f-container-435684 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-text-435685 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: nowrap; overflow: visible; font-size: 12px; line-height: 16px; font-family: "Montserrat", sans-serif; font-weight: 500; color: rgba(55, 65, 81, 1); text-align: left; align-items: flex-start; justify-content: center; }
+
+.f-phone-435686 { position: relative; align-self: stretch; width: 100%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 8px; padding: 1px 0px 0px 0px; }
+.f-margin-435687 { position: relative; width: 24px; height: 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 1px 0px 0px 0px; flex-shrink: 0; }
+.f-background-435688 { position: relative; width: 24px; height: 24px; box-sizing: border-box; background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); border-radius: 9999px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.f-svg-435689 { position: relative; width: 14px; height: 14px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.f-container-435691 { position: relative; width: 145px; min-height: 38px; box-sizing: border-box; }
+.f-text-435692 { position: relative; width: auto; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; overflow: visible; font-size: 12px; line-height: 17px; font-family: "Montserrat", sans-serif; font-weight: 500; color: rgba(55, 65, 81, 1); text-align: left; align-items: flex-start; justify-content: center; }
+
+.f-rightcolumnaddress-435693 { position: relative; flex: 1.1; width: 100%; box-sizing: border-box; border-left: 1px solid rgba(229, 231, 235, 1); display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; gap: 8px; padding: 0px 0px 6px 14px; }
+.f-margin-435694 { position: relative; width: 24px; height: 28px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 2px 0px 0px 0px; flex-shrink: 0; }
+.f-background-435695 { position: relative; width: 24px; height: 24px; box-sizing: border-box; background: linear-gradient(rgba(0, 166, 81, 1), rgba(0, 166, 81, 1)); border-radius: 9999px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.f-svg-435696 { position: relative; width: 14px; height: 14px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+.f-paragraph-435698 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 0px 2px 0px 0px; }
+.f-strongcomacontechnologiesllcfz-435699 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; overflow: visible; font-size: 12px; line-height: 16px; font-family: "Montserrat", sans-serif; font-weight: 700; color: rgba(0, 0, 0, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-text-4356100 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; overflow: visible; font-size: 11.5px; line-height: 16px; font-family: "Montserrat", sans-serif; font-weight: 500; color: rgba(55, 65, 81, 1); text-align: left; align-items: flex-start; justify-content: center; }
+
+.f-footerbar-4356102 { position: absolute; left: 0px; top: 740px; width: 510px; height: 28px; box-sizing: border-box; background: linear-gradient(rgba(0, 138, 69, 1), rgba(0, 138, 69, 1)); }
+
+/* --- EXACT BACK CARD STYLES --- */
+.f-maincard-43559 { 
+  position: relative; 
+  width: 156.24px; 
+  height: 241px; 
+  box-sizing: border-box; 
+  box-shadow: 0px 8px 16px -4px rgba(0, 0, 0, 0.22); 
+  background: transparent; 
+  overflow: hidden; 
+  margin: 0 auto; 
+  border-radius: 8px; 
+}
+
+.f-maincard-inner { 
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  width: 510px; 
+  height: 768px; 
+  transform: scale(0.30635294, 0.31380208);
+  transform-origin: 0 0;
+  box-sizing: border-box; 
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.0016), 0px 20px 25px -5px rgba(0, 0, 0, 0.01); 
+  background: url('id card design/background.jpg') no-repeat center center / cover, linear-gradient(rgba(249, 250, 248, 1), rgba(249, 250, 248, 1)); 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  overflow: hidden; 
+}
+
+.f-punchholemargin-435510 { position: relative; width: 510px; height: 74px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding: 20px 0px 0px 0px; z-index: 10; }
+.f-heading1brandlogomargin-435512 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px 0px 0px 0px; width: 100%; height: 300px; z-index: 5; }
+
+.back-logo-img {
+  max-width: 320px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.f-leftwaves-435514 { position: absolute; left: -20px; top: 0px; width: 140px; height: 768px; box-sizing: border-box; opacity: 0.45; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; pointer-events: none; }
+.f-svg-435515 { position: relative; align-self: stretch; flex: 1; width: 100%; height: 100%; box-sizing: border-box; overflow: hidden; }
+
+.f-footerbar-435522 { position: absolute; left: 0px; top: 740px; width: 510px; height: 28px; box-sizing: border-box; background: linear-gradient(rgba(0, 138, 69, 1), rgba(0, 138, 69, 1)); }
+
+.f-emergencycontactsectionmargin-435523 { position: relative; width: 340px; height: 250px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 20px 0px 0px 0px; z-index: 5; margin-top: auto; margin-bottom: 50px; }
+.f-emergencycontactsection-435524 { position: relative; width: 340px; height: 180px; box-sizing: border-box; background: linear-gradient(rgba(0, 138, 69, 1), rgba(0, 138, 69, 1)); border-radius: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.f-specialstylingfortheasymmetriccutout-435525 { position: relative; align-self: stretch; flex: 1; width: 100%; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+.f-iconcontainermargin-435526 { position: relative; width: 56px; height: 60px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 0px 0px 12px 0px; }
+.f-iconcontainer-435527 { position: relative; width: 56px; height: 48px; box-sizing: border-box; background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)); border-radius: 24px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+.f-svg-435528 { position: relative; width: 24px; height: 24px; box-sizing: border-box; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+
+.f-textlabelsmargin-435530 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; padding: 0px 0px 6px 0px; }
+.f-textlabelsforemergencycontact-435531 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: nowrap; overflow: visible; font-size: 16px; line-height: 24px; letter-spacing: 0.6px; font-family: "Montserrat", sans-serif; font-weight: 600; color: rgba(255, 255, 255, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-container-435532 { position: relative; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.f-text-435533 { position: relative; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: nowrap; overflow: visible; font-size: 24px; line-height: 32px; letter-spacing: 0.6px; font-family: "Montserrat", sans-serif; font-weight: 700; color: rgba(255, 255, 255, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-background-435534 { position: absolute; left: 255px; top: 0px; width: 85px; height: 60px; box-sizing: border-box; background: linear-gradient(rgba(249, 250, 248, 1), rgba(249, 250, 248, 1)); border-radius: 0px 0px 0px 28px; }
+
+@page {
+  size: 53.98mm 85.6mm;
+  margin: 0;
+}
+
+@media print {
+  body { background: none; padding: 0; gap: 0; }
+  .person-title { display: none; }
+  .card-pair { page-break-after: always; }
+  .f-frame1-43612, .f-maincard-43559 {
+    width: 156.24px !important;
+    height: 241px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- =========================================================
+       PERSON 1: DINIL NK
+       ========================================================= -->
+  <div class="person-container">
+    <h2 class="person-title">Dinil NK - ID Card</h2>
+    <div class="card-pair">
+      
+      <!-- FRONT SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Front Side</span>
+        <div class="f-frame1-43612">
+          <div class="f-mainidcardwrapper-435638">
+            <div class="f-topnotchdesignmargin-435639">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-headerbranding-435647">
+              <div class="f-container-435648">
+                <div class="f-container-435649">
+                  <div class="f-text-435650 text-node" data-orig-h="48">Udot</div>
+                </div>
+                <div class="f-margin-435651">
+                  <div class="f-verticaldivider-435652"></div>
+                </div>
+                <div class="f-container-435653">
+                  <div class="f-text-435654 text-node" data-orig-h="28">SUSTAINABILITY<br/>THROUGH TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOP RIGHT WAVE PATTERN -->
+            <div class="f-toprightwaves">
+              <svg width="250" height="420" viewBox="0 0 250 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M130 0C175 85 215 170 150 255C85 340 190 400 235 420" stroke="#00A651" stroke-width="0.75" opacity="0.4"/>
+                <path d="M150 0C195 85 225 170 165 255C105 340 205 400 245 420" stroke="#00A651" stroke-width="0.75" opacity="0.45"/>
+                <path d="M170 0C210 85 235 170 180 255C125 340 220 400 255 420" stroke="#00A651" stroke-width="0.75" opacity="0.5"/>
+                <path d="M190 0C225 85 245 170 195 255C145 340 235 400 265 420" stroke="#00A651" stroke-width="0.75" opacity="0.55"/>
+                <path d="M210 0C240 85 255 170 210 255C165 340 250 400 275 420" stroke="#00A651" stroke-width="0.75" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <div class="f-portraitimagearea-435655">
+              <img class="f-person-photo-img" src="id card design/dinil nk.png" alt="Dinil NK" />
+              <div class="f-namebadgeoverlay-435657">
+                <div class="f-background-435658"></div>
+                <div class="f-background-435659">
+                  <div class="f-heading1faisalkuttukkan-435660 text-node" data-orig-h="75">DINIL<br/>NK</div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerdetailssection-435661">
+              <div class="f-jobtitle-435662">
+                <div class="f-businessdevelopmentmanager-435663 text-node" data-orig-h="28">CEO</div>
+              </div>
+              <div class="f-companylogoname-435664">
+                <div class="f-margin-435665">
+                  <div class="f-background-435666">
+                    <div class="f-svg-435667">
+                      <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.25 0L0 15.2417L0.591667 15.8333L6.25 13.3333L11.9083 15.8333L12.5 15.2417L6.25 0Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-container-435669">
+                  <div class="f-text-435670 text-node" data-orig-h="28">UDOT REALITY</div>
+                </div>
+              </div>
+              <div class="f-frame2-43613">
+                <div class="f-contactinfogrid-435671">
+                  <div class="f-leftcolumndigitalphone-435672">
+                    <div class="f-email-435673">
+                      <div class="f-background-435674">
+                        <div class="f-svg-435675">
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.583374 2.33325L5.18587 5.40159C5.57792 5.66315 6.08883 5.66315 6.48087 5.40159L11.0834 2.33325M1.75004 8.74992H9.91671C10.5606 8.74992 11.0834 8.22715 11.0834 7.58325V1.74992C11.0834 1.10602 10.5606 0.583252 9.91671 0.583252H1.75004C1.10614 0.583252 0.583374 1.10602 0.583374 1.74992V7.58325C0.583374 8.22715 1.10614 8.74992 1.75004 8.74992" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="f-container-435677">
+                        <div class="f-text-435678 text-node" data-orig-h="16">dinil@udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-web-435679">
+                      <div class="f-margin-435680">
+                        <div class="f-background-435681">
+                          <div class="f-svg-435682">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="6" cy="6" r="5.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M0.75 6H11.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M6 0.75C7.25 2.25 8 4 8 6C8 8 7.25 9.75 6 11.25C4.75 9.75 4 8 4 6C4 4 4.75 2.25 6 0.75Z" stroke="white" stroke-width="1.2"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435684">
+                        <div class="f-text-435685 text-node" data-orig-h="16">www.udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-phone-435686">
+                      <div class="f-margin-435687">
+                        <div class="f-background-435688">
+                          <div class="f-svg-435689">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.11167 4.54417C2.9573 6.19764 4.30236 7.5427 5.95583 8.38833L7.23917 7.105C7.40082 6.92225 7.65913 6.85942 7.88667 6.9475C8.54 7.21 9.24583 7.35 9.975 7.35C10.2969 7.35 10.5583 7.61138 10.5583 7.93333V9.91667C10.5583 10.2386 10.2969 10.5 9.975 10.5C4.46583 10.5 0 6.03417 0 0.525C0 0.203056 0.261389 0 0.583333 0H2.625C2.94694 0 3.20833 0.261389 3.20833 0.583333C3.20833 1.3125 3.34833 2.01833 3.61083 2.67167C3.69891 2.8992 3.63608 3.15751 3.45333 3.31917L2.17 4.6025L2.11167 4.54417Z" fill="white"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435691">
+                        <div class="f-text-435692 text-node" data-orig-h="38">(+91) 9544354222</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-rightcolumnaddress-435693">
+                    <div class="f-margin-435694">
+                      <div class="f-background-435695">
+                        <div class="f-svg-435696">
+                          <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.08333 0C1.82583 0 0 1.82583 0 4.08333C0 7.14583 4.08333 11.6667 4.08333 11.6667C4.08333 11.6667 8.16667 7.14583 8.16667 4.08333C8.16667 1.82583 6.34083 0 4.08333 0ZM4.08333 5.54167C3.27846 5.54167 2.625 4.88821 2.625 4.08333C2.625 3.27846 3.27846 2.625 4.08333 2.625C4.88821 2.625 5.54167 3.27846 5.54167 4.08333C5.54167 4.88821 4.88821 5.54167 4.08333 5.54167Z" fill="white"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="f-paragraph-435698">
+                      <div class="f-strongcomacontechnologiesllcfz-435699 text-node" data-orig-h="24">UDOT REALITY PRIVATE LIMITED</div>
+                      <div class="f-text-4356100 text-node" data-orig-h="48">No 4, 2nd FLOOR, OUTER RING,<br/>KIRTI ARCADE, MANSI NAGAR, Udayagiri<br/>Mysore, Karnataka, India, 570019</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerbar-4356102"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Back Side</span>
+        <div class="f-maincard-43559">
+          <div class="f-maincard-inner">
+            <div class="f-punchholemargin-435510">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-heading1brandlogomargin-435512">
+              <img class="back-logo-img" src="card/udot reality.jpeg" alt="Udot Reality" />
+            </div>
+            <div class="f-leftwaves-435514">
+              <div class="f-svg-435515">
+                <svg width="34" height="661" viewBox="0 0 34 661" fill="none" xmlns="http://www.w3.org/2000/svg" class="f-vector-435516">
+                  <path d="M16.7062 0C38.7062 110 38.7062 220 16.7062 330C-5.29376 440 -5.29376 550 16.7062 660" stroke="#008A45" stroke-width="0.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="f-footerbar-435522"></div>
+            <div class="f-emergencycontactsectionmargin-435523">
+              <div class="f-emergencycontactsection-435524">
+                <div class="f-specialstylingfortheasymmetriccutout-435525">
+                  <div class="f-iconcontainermargin-435526">
+                    <div class="f-iconcontainer-435527">
+                      <div class="f-svg-435528">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19.8333 14.5833C18.4333 14.5833 17.0333 14.35 15.6333 13.8833C15.2833 13.7667 14.8833 13.8667 14.6167 14.1333L12.45 16.8333C8.98333 15.0667 6.13333 12.2167 4.36667 8.75L7.06667 6.58333C7.33333 6.31667 7.43333 5.91667 7.31667 5.56667C6.85 4.16667 6.61667 2.76667 6.61667 1.36667C6.61667 0.616667 6 0 5.25 0H1.36667C0.616667 0 0 0.616667 0 1.36667C0 12.1167 8.88333 21 19.6333 21C20.3833 21 21 20.3833 21 19.6333V15.75C21 15 20.3833 14.5833 19.8333 14.5833Z" fill="#008A45"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-textlabelsmargin-435530">
+                    <div class="f-textlabelsforemergencycontact-435531 text-node" data-orig-h="20">For Emergency Contact</div>
+                  </div>
+                  <div class="f-container-435532">
+                    <div class="f-text-435533 text-node" data-orig-h="32">+91 9544354222</div>
+                  </div>
+                </div>
+                <div class="f-background-435534"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       PERSON 2: AKSHAYA PALERI
+       ========================================================= -->
+  <div class="person-container">
+    <h2 class="person-title">Akshaya Paleri - ID Card</h2>
+    <div class="card-pair">
+      
+      <!-- FRONT SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Front Side</span>
+        <div class="f-frame1-43612">
+          <div class="f-mainidcardwrapper-435638">
+            <div class="f-topnotchdesignmargin-435639">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-headerbranding-435647">
+              <div class="f-container-435648">
+                <div class="f-container-435649">
+                  <div class="f-text-435650 text-node" data-orig-h="48">Udot</div>
+                </div>
+                <div class="f-margin-435651">
+                  <div class="f-verticaldivider-435652"></div>
+                </div>
+                <div class="f-container-435653">
+                  <div class="f-text-435654 text-node" data-orig-h="28">SUSTAINABILITY<br/>THROUGH TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOP RIGHT WAVE PATTERN -->
+            <div class="f-toprightwaves">
+              <svg width="250" height="420" viewBox="0 0 250 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M130 0C175 85 215 170 150 255C85 340 190 400 235 420" stroke="#00A651" stroke-width="0.75" opacity="0.4"/>
+                <path d="M150 0C195 85 225 170 165 255C105 340 205 400 245 420" stroke="#00A651" stroke-width="0.75" opacity="0.45"/>
+                <path d="M170 0C210 85 235 170 180 255C125 340 220 400 255 420" stroke="#00A651" stroke-width="0.75" opacity="0.5"/>
+                <path d="M190 0C225 85 245 170 195 255C145 340 235 400 265 420" stroke="#00A651" stroke-width="0.75" opacity="0.55"/>
+                <path d="M210 0C240 85 255 170 210 255C165 340 250 400 275 420" stroke="#00A651" stroke-width="0.75" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <div class="f-portraitimagearea-435655">
+              <img class="f-person-photo-img" src="id card design/akshaya paleri.png" alt="Akshaya Paleri" />
+              <div class="f-namebadgeoverlay-435657">
+                <div class="f-background-435658"></div>
+                <div class="f-background-435659">
+                  <div class="f-heading1faisalkuttukkan-435660 text-node" data-orig-h="75">AKSHAYA<br/>PALERI</div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerdetailssection-435661">
+              <div class="f-jobtitle-435662">
+                <div class="f-businessdevelopmentmanager-435663 text-node" data-orig-h="28">CEO</div>
+              </div>
+              <div class="f-companylogoname-435664">
+                <div class="f-margin-435665">
+                  <div class="f-background-435666">
+                    <div class="f-svg-435667">
+                      <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.25 0L0 15.2417L0.591667 15.8333L6.25 13.3333L11.9083 15.8333L12.5 15.2417L6.25 0Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-container-435669">
+                  <div class="f-text-435670 text-node" data-orig-h="28">UDOT EDU</div>
+                </div>
+              </div>
+              <div class="f-frame2-43613">
+                <div class="f-contactinfogrid-435671">
+                  <div class="f-leftcolumndigitalphone-435672">
+                    <div class="f-email-435673">
+                      <div class="f-background-435674">
+                        <div class="f-svg-435675">
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.583374 2.33325L5.18587 5.40159C5.57792 5.66315 6.08883 5.66315 6.48087 5.40159L11.0834 2.33325M1.75004 8.74992H9.91671C10.5606 8.74992 11.0834 8.22715 11.0834 7.58325V1.74992C11.0834 1.10602 10.5606 0.583252 9.91671 0.583252H1.75004C1.10614 0.583252 0.583374 1.10602 0.583374 1.74992V7.58325C0.583374 8.22715 1.10614 8.74992 1.75004 8.74992" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="f-container-435677">
+                        <div class="f-text-435678 text-node" data-orig-h="16">akshaya@udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-web-435679">
+                      <div class="f-margin-435680">
+                        <div class="f-background-435681">
+                          <div class="f-svg-435682">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="6" cy="6" r="5.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M0.75 6H11.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M6 0.75C7.25 2.25 8 4 8 6C8 8 7.25 9.75 6 11.25C4.75 9.75 4 8 4 6C4 4 4.75 2.25 6 0.75Z" stroke="white" stroke-width="1.2"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435684">
+                        <div class="f-text-435685 text-node" data-orig-h="16">www.udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-phone-435686">
+                      <div class="f-margin-435687">
+                        <div class="f-background-435688">
+                          <div class="f-svg-435689">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.11167 4.54417C2.9573 6.19764 4.30236 7.5427 5.95583 8.38833L7.23917 7.105C7.40082 6.92225 7.65913 6.85942 7.88667 6.9475C8.54 7.21 9.24583 7.35 9.975 7.35C10.2969 7.35 10.5583 7.61138 10.5583 7.93333V9.91667C10.5583 10.2386 10.2969 10.5 9.975 10.5C4.46583 10.5 0 6.03417 0 0.525C0 0.203056 0.261389 0 0.583333 0H2.625C2.94694 0 3.20833 0.261389 3.20833 0.583333C3.20833 1.3125 3.34833 2.01833 3.61083 2.67167C3.69891 2.8992 3.63608 3.15751 3.45333 3.31917L2.17 4.6025L2.11167 4.54417Z" fill="white"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435691">
+                        <div class="f-text-435692 text-node" data-orig-h="38">(+91) 6282420344</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-rightcolumnaddress-435693">
+                    <div class="f-margin-435694">
+                      <div class="f-background-435695">
+                        <div class="f-svg-435696">
+                          <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.08333 0C1.82583 0 0 1.82583 0 4.08333C0 7.14583 4.08333 11.6667 4.08333 11.6667C4.08333 11.6667 8.16667 7.14583 8.16667 4.08333C8.16667 1.82583 6.34083 0 4.08333 0ZM4.08333 5.54167C3.27846 5.54167 2.625 4.88821 2.625 4.08333C2.625 3.27846 3.27846 2.625 4.08333 2.625C4.88821 2.625 5.54167 3.27846 5.54167 4.08333C5.54167 4.88821 4.88821 5.54167 4.08333 5.54167Z" fill="white"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="f-paragraph-435698">
+                      <div class="f-strongcomacontechnologiesllcfz-435699 text-node" data-orig-h="24">UDOT EDU PRIVATE LIMITED</div>
+                      <div class="f-text-4356100 text-node" data-orig-h="48">No.4, 1st Floor, Suite 101<br/>Kirti Arcade, Outer Ring Road,<br/>Mansi Nagar Cross<br/>Mysore, Karnataka</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerbar-4356102"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Back Side</span>
+        <div class="f-maincard-43559">
+          <div class="f-maincard-inner">
+            <div class="f-punchholemargin-435510">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-heading1brandlogomargin-435512">
+              <img class="back-logo-img" src="card/reality edu.jpeg" alt="Udot Edu" />
+            </div>
+            <div class="f-leftwaves-435514">
+              <div class="f-svg-435515">
+                <svg width="34" height="661" viewBox="0 0 34 661" fill="none" xmlns="http://www.w3.org/2000/svg" class="f-vector-435516">
+                  <path d="M16.7062 0C38.7062 110 38.7062 220 16.7062 330C-5.29376 440 -5.29376 550 16.7062 660" stroke="#008A45" stroke-width="0.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="f-footerbar-435522"></div>
+            <div class="f-emergencycontactsectionmargin-435523">
+              <div class="f-emergencycontactsection-435524">
+                <div class="f-specialstylingfortheasymmetriccutout-435525">
+                  <div class="f-iconcontainermargin-435526">
+                    <div class="f-iconcontainer-435527">
+                      <div class="f-svg-435528">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19.8333 14.5833C18.4333 14.5833 17.0333 14.35 15.6333 13.8833C15.2833 13.7667 14.8833 13.8667 14.6167 14.1333L12.45 16.8333C8.98333 15.0667 6.13333 12.2167 4.36667 8.75L7.06667 6.58333C7.33333 6.31667 7.43333 5.91667 7.31667 5.56667C6.85 4.16667 6.61667 2.76667 6.61667 1.36667C6.61667 0.616667 6 0 5.25 0H1.36667C0.616667 0 0 0.616667 0 1.36667C0 12.1167 8.88333 21 19.6333 21C20.3833 21 21 20.3833 21 19.6333V15.75C21 15 20.3833 14.5833 19.8333 14.5833Z" fill="#008A45"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-textlabelsmargin-435530">
+                    <div class="f-textlabelsforemergencycontact-435531 text-node" data-orig-h="20">For Emergency Contact</div>
+                  </div>
+                  <div class="f-container-435532">
+                    <div class="f-text-435533 text-node" data-orig-h="32">+91 6282420344</div>
+                  </div>
+                </div>
+                <div class="f-background-435534"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       PERSON 3: NANTHU MS
+       ========================================================= -->
+  <div class="person-container">
+    <h2 class="person-title">Nanthu MS - ID Card</h2>
+    <div class="card-pair">
+      
+      <!-- FRONT SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Front Side</span>
+        <div class="f-frame1-43612">
+          <div class="f-mainidcardwrapper-435638">
+            <div class="f-topnotchdesignmargin-435639">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-headerbranding-435647">
+              <div class="f-container-435648">
+                <div class="f-container-435649">
+                  <div class="f-text-435650 text-node" data-orig-h="48">Udot</div>
+                </div>
+                <div class="f-margin-435651">
+                  <div class="f-verticaldivider-435652"></div>
+                </div>
+                <div class="f-container-435653">
+                  <div class="f-text-435654 text-node" data-orig-h="28">SUSTAINABILITY<br/>THROUGH TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOP RIGHT WAVE PATTERN -->
+            <div class="f-toprightwaves">
+              <svg width="250" height="420" viewBox="0 0 250 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M130 0C175 85 215 170 150 255C85 340 190 400 235 420" stroke="#00A651" stroke-width="0.75" opacity="0.4"/>
+                <path d="M150 0C195 85 225 170 165 255C105 340 205 400 245 420" stroke="#00A651" stroke-width="0.75" opacity="0.45"/>
+                <path d="M170 0C210 85 235 170 180 255C125 340 220 400 255 420" stroke="#00A651" stroke-width="0.75" opacity="0.5"/>
+                <path d="M190 0C225 85 245 170 195 255C145 340 235 400 265 420" stroke="#00A651" stroke-width="0.75" opacity="0.55"/>
+                <path d="M210 0C240 85 255 170 210 255C165 340 250 400 275 420" stroke="#00A651" stroke-width="0.75" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <div class="f-portraitimagearea-435655">
+              <img class="f-person-photo-img" src="id card design/ms nanthu.png" alt="Nanthu MS" />
+              <div class="f-namebadgeoverlay-435657">
+                <div class="f-background-435658"></div>
+                <div class="f-background-435659">
+                  <div class="f-heading1faisalkuttukkan-435660 text-node" data-orig-h="75">NANTHU<br/>MS</div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerdetailssection-435661">
+              <div class="f-jobtitle-435662">
+                <div class="f-businessdevelopmentmanager-435663 text-node" data-orig-h="28">CEO</div>
+              </div>
+              <div class="f-companylogoname-435664">
+                <div class="f-margin-435665">
+                  <div class="f-background-435666">
+                    <div class="f-svg-435667">
+                      <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.25 0L0 15.2417L0.591667 15.8333L6.25 13.3333L11.9083 15.8333L12.5 15.2417L6.25 0Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-container-435669">
+                  <div class="f-text-435670 text-node" data-orig-h="28">UDOT HOSPITALITY & LIFESTYLE</div>
+                </div>
+              </div>
+              <div class="f-frame2-43613">
+                <div class="f-contactinfogrid-435671">
+                  <div class="f-leftcolumndigitalphone-435672">
+                    <div class="f-email-435673">
+                      <div class="f-background-435674">
+                        <div class="f-svg-435675">
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.583374 2.33325L5.18587 5.40159C5.57792 5.66315 6.08883 5.66315 6.48087 5.40159L11.0834 2.33325M1.75004 8.74992H9.91671C10.5606 8.74992 11.0834 8.22715 11.0834 7.58325V1.74992C11.0834 1.10602 10.5606 0.583252 9.91671 0.583252H1.75004C1.10614 0.583252 0.583374 1.10602 0.583374 1.74992V7.58325C0.583374 8.22715 1.10614 8.74992 1.75004 8.74992" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="f-container-435677">
+                        <div class="f-text-435678 text-node" data-orig-h="16">msnanthu@udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-web-435679">
+                      <div class="f-margin-435680">
+                        <div class="f-background-435681">
+                          <div class="f-svg-435682">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="6" cy="6" r="5.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M0.75 6H11.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M6 0.75C7.25 2.25 8 4 8 6C8 8 7.25 9.75 6 11.25C4.75 9.75 4 8 4 6C4 4 4.75 2.25 6 0.75Z" stroke="white" stroke-width="1.2"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435684">
+                        <div class="f-text-435685 text-node" data-orig-h="16">www.udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-phone-435686">
+                      <div class="f-margin-435687">
+                        <div class="f-background-435688">
+                          <div class="f-svg-435689">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.11167 4.54417C2.9573 6.19764 4.30236 7.5427 5.95583 8.38833L7.23917 7.105C7.40082 6.92225 7.65913 6.85942 7.88667 6.9475C8.54 7.21 9.24583 7.35 9.975 7.35C10.2969 7.35 10.5583 7.61138 10.5583 7.93333V9.91667C10.5583 10.2386 10.2969 10.5 9.975 10.5C4.46583 10.5 0 6.03417 0 0.525C0 0.203056 0.261389 0 0.583333 0H2.625C2.94694 0 3.20833 0.261389 3.20833 0.583333C3.20833 1.3125 3.34833 2.01833 3.61083 2.67167C3.69891 2.8992 3.63608 3.15751 3.45333 3.31917L2.17 4.6025L2.11167 4.54417Z" fill="white"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435691">
+                        <div class="f-text-435692 text-node" data-orig-h="38">(+91) 9809081828</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-rightcolumnaddress-435693">
+                    <div class="f-margin-435694">
+                      <div class="f-background-435695">
+                        <div class="f-svg-435696">
+                          <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.08333 0C1.82583 0 0 1.82583 0 4.08333C0 7.14583 4.08333 11.6667 4.08333 11.6667C4.08333 11.6667 8.16667 7.14583 8.16667 4.08333C8.16667 1.82583 6.34083 0 4.08333 0ZM4.08333 5.54167C3.27846 5.54167 2.625 4.88821 2.625 4.08333C2.625 3.27846 3.27846 2.625 4.08333 2.625C4.88821 2.625 5.54167 3.27846 5.54167 4.08333C5.54167 4.88821 4.88821 5.54167 4.08333 5.54167Z" fill="white"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="f-paragraph-435698">
+                      <div class="f-strongcomacontechnologiesllcfz-435699 text-node" data-orig-h="24">UDOT HOSPITALITY & LIFESTYLE PVT. LTD.</div>
+                      <div class="f-text-4356100 text-node" data-orig-h="48">No.4, 1st Floor, Suite 102<br/>Kirti Arcade, Outer Ring Road,<br/>Mansi Nagar Cross<br/>Mysore, Karnataka</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerbar-4356102"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Back Side</span>
+        <div class="f-maincard-43559">
+          <div class="f-maincard-inner">
+            <div class="f-punchholemargin-435510">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-heading1brandlogomargin-435512">
+              <img class="back-logo-img" src="card/u dot hospitality.png" alt="Udot Hospitality" />
+            </div>
+            <div class="f-leftwaves-435514">
+              <div class="f-svg-435515">
+                <svg width="34" height="661" viewBox="0 0 34 661" fill="none" xmlns="http://www.w3.org/2000/svg" class="f-vector-435516">
+                  <path d="M16.7062 0C38.7062 110 38.7062 220 16.7062 330C-5.29376 440 -5.29376 550 16.7062 660" stroke="#008A45" stroke-width="0.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="f-footerbar-435522"></div>
+            <div class="f-emergencycontactsectionmargin-435523">
+              <div class="f-emergencycontactsection-435524">
+                <div class="f-specialstylingfortheasymmetriccutout-435525">
+                  <div class="f-iconcontainermargin-435526">
+                    <div class="f-iconcontainer-435527">
+                      <div class="f-svg-435528">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19.8333 14.5833C18.4333 14.5833 17.0333 14.35 15.6333 13.8833C15.2833 13.7667 14.8833 13.8667 14.6167 14.1333L12.45 16.8333C8.98333 15.0667 6.13333 12.2167 4.36667 8.75L7.06667 6.58333C7.33333 6.31667 7.43333 5.91667 7.31667 5.56667C6.85 4.16667 6.61667 2.76667 6.61667 1.36667C6.61667 0.616667 6 0 5.25 0H1.36667C0.616667 0 0 0.616667 0 1.36667C0 12.1167 8.88333 21 19.6333 21C20.3833 21 21 20.3833 21 19.6333V15.75C21 15 20.3833 14.5833 19.8333 14.5833Z" fill="#008A45"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-textlabelsmargin-435530">
+                    <div class="f-textlabelsforemergencycontact-435531 text-node" data-orig-h="20">For Emergency Contact</div>
+                  </div>
+                  <div class="f-container-435532">
+                    <div class="f-text-435533 text-node" data-orig-h="32">+91 9809081828</div>
+                  </div>
+                </div>
+                <div class="f-background-435534"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       PERSON 4: MIRSHAD TP
+       ========================================================= -->
+  <div class="person-container">
+    <h2 class="person-title">Mirshad TP - ID Card</h2>
+    <div class="card-pair">
+      
+      <!-- FRONT SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Front Side</span>
+        <div class="f-frame1-43612">
+          <div class="f-mainidcardwrapper-435638">
+            <div class="f-topnotchdesignmargin-435639">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-headerbranding-435647">
+              <div class="f-container-435648">
+                <div class="f-container-435649">
+                  <div class="f-text-435650 text-node" data-orig-h="48">Udot</div>
+                </div>
+                <div class="f-margin-435651">
+                  <div class="f-verticaldivider-435652"></div>
+                </div>
+                <div class="f-container-435653">
+                  <div class="f-text-435654 text-node" data-orig-h="28">SUSTAINABILITY<br/>THROUGH TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TOP RIGHT WAVE PATTERN -->
+            <div class="f-toprightwaves">
+              <svg width="250" height="420" viewBox="0 0 250 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M130 0C175 85 215 170 150 255C85 340 190 400 235 420" stroke="#00A651" stroke-width="0.75" opacity="0.4"/>
+                <path d="M150 0C195 85 225 170 165 255C105 340 205 400 245 420" stroke="#00A651" stroke-width="0.75" opacity="0.45"/>
+                <path d="M170 0C210 85 235 170 180 255C125 340 220 400 255 420" stroke="#00A651" stroke-width="0.75" opacity="0.5"/>
+                <path d="M190 0C225 85 245 170 195 255C145 340 235 400 265 420" stroke="#00A651" stroke-width="0.75" opacity="0.55"/>
+                <path d="M210 0C240 85 255 170 210 255C165 340 250 400 275 420" stroke="#00A651" stroke-width="0.75" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <div class="f-portraitimagearea-435655">
+              <img class="f-person-photo-img" src="id card design/mirshad tp.png" alt="Mirshad TP" />
+              <div class="f-namebadgeoverlay-435657">
+                <div class="f-background-435658"></div>
+                <div class="f-background-435659">
+                  <div class="f-heading1faisalkuttukkan-435660 text-node" data-orig-h="75">MIRSHAD<br/>TP</div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerdetailssection-435661">
+              <div class="f-jobtitle-435662">
+                <div class="f-businessdevelopmentmanager-435663 text-node" data-orig-h="28">CEO</div>
+              </div>
+              <div class="f-companylogoname-435664">
+                <div class="f-margin-435665">
+                  <div class="f-background-435666">
+                    <div class="f-svg-435667">
+                      <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.25 0L0 15.2417L0.591667 15.8333L6.25 13.3333L11.9083 15.8333L12.5 15.2417L6.25 0Z" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-container-435669">
+                  <div class="f-text-435670 text-node" data-orig-h="28">COMACON TECHNOLOGIES LLC</div>
+                </div>
+              </div>
+              <div class="f-frame2-43613">
+                <div class="f-contactinfogrid-435671">
+                  <div class="f-leftcolumndigitalphone-435672">
+                    <div class="f-email-435673">
+                      <div class="f-background-435674">
+                        <div class="f-svg-435675">
+                          <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.583374 2.33325L5.18587 5.40159C5.57792 5.66315 6.08883 5.66315 6.48087 5.40159L11.0834 2.33325M1.75004 8.74992H9.91671C10.5606 8.74992 11.0834 8.22715 11.0834 7.58325V1.74992C11.0834 1.10602 10.5606 0.583252 9.91671 0.583252H1.75004C1.10614 0.583252 0.583374 1.10602 0.583374 1.74992V7.58325C0.583374 8.22715 1.10614 8.74992 1.75004 8.74992" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="f-container-435677">
+                        <div class="f-text-435678 text-node" data-orig-h="16">mirshad@udot.world</div>
+                      </div>
+                    </div>
+                    <div class="f-web-435679">
+                      <div class="f-margin-435680">
+                        <div class="f-background-435681">
+                          <div class="f-svg-435682">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="6" cy="6" r="5.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M0.75 6H11.25" stroke="white" stroke-width="1.2"/>
+                              <path d="M6 0.75C7.25 2.25 8 4 8 6C8 8 7.25 9.75 6 11.25C4.75 9.75 4 8 4 6C4 4 4.75 2.25 6 0.75Z" stroke="white" stroke-width="1.2"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435684">
+                        <div class="f-text-435685 text-node" data-orig-h="16">www.comacon.ae</div>
+                      </div>
+                    </div>
+                    <div class="f-phone-435686">
+                      <div class="f-margin-435687">
+                        <div class="f-background-435688">
+                          <div class="f-svg-435689">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.11167 4.54417C2.9573 6.19764 4.30236 7.5427 5.95583 8.38833L7.23917 7.105C7.40082 6.92225 7.65913 6.85942 7.88667 6.9475C8.54 7.21 9.24583 7.35 9.975 7.35C10.2969 7.35 10.5583 7.61138 10.5583 7.93333V9.91667C10.5583 10.2386 10.2969 10.5 9.975 10.5C4.46583 10.5 0 6.03417 0 0.525C0 0.203056 0.261389 0 0.583333 0H2.625C2.94694 0 3.20833 0.261389 3.20833 0.583333C3.20833 1.3125 3.34833 2.01833 3.61083 2.67167C3.69891 2.8992 3.63608 3.15751 3.45333 3.31917L2.17 4.6025L2.11167 4.54417Z" fill="white"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="f-container-435691">
+                        <div class="f-text-435692 text-node" data-orig-h="38">(+971) 559967210<br/>(+91) 9686994322</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-rightcolumnaddress-435693">
+                    <div class="f-margin-435694">
+                      <div class="f-background-435695">
+                        <div class="f-svg-435696">
+                          <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.08333 0C1.82583 0 0 1.82583 0 4.08333C0 7.14583 4.08333 11.6667 4.08333 11.6667C4.08333 11.6667 8.16667 7.14583 8.16667 4.08333C8.16667 1.82583 6.34083 0 4.08333 0ZM4.08333 5.54167C3.27846 5.54167 2.625 4.88821 2.625 4.08333C2.625 3.27846 3.27846 2.625 4.08333 2.625C4.88821 2.625 5.54167 3.27846 5.54167 4.08333C5.54167 4.88821 4.88821 5.54167 4.08333 5.54167Z" fill="white"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="f-paragraph-435698">
+                      <div class="f-strongcomacontechnologiesllcfz-435699 text-node" data-orig-h="24">Comacon Technologies L.L.C-FZ</div>
+                      <div class="f-text-4356100 text-node" data-orig-h="48">Meydan Grandstand, 6th floor,<br/>Meydan Road, Nad Al Sheba,<br/>Dubai, U.A.E.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="f-footerbar-4356102"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK SIDE -->
+      <div class="card-wrapper">
+        <span class="card-side-label">Back Side</span>
+        <div class="f-maincard-43559">
+          <div class="f-maincard-inner">
+            <div class="f-punchholemargin-435510">
+              <div class="f-topnotchdesign-435640"></div>
+            </div>
+            <div class="f-heading1brandlogomargin-435512">
+              <img class="back-logo-img" src="card/comacon.png" alt="Comacon Technologies" />
+            </div>
+            <div class="f-leftwaves-435514">
+              <div class="f-svg-435515">
+                <svg width="34" height="661" viewBox="0 0 34 661" fill="none" xmlns="http://www.w3.org/2000/svg" class="f-vector-435516">
+                  <path d="M16.7062 0C38.7062 110 38.7062 220 16.7062 330C-5.29376 440 -5.29376 550 16.7062 660" stroke="#008A45" stroke-width="0.8"/>
+                </svg>
+              </div>
+            </div>
+            <div class="f-footerbar-435522"></div>
+            <div class="f-emergencycontactsectionmargin-435523">
+              <div class="f-emergencycontactsection-435524">
+                <div class="f-specialstylingfortheasymmetriccutout-435525">
+                  <div class="f-iconcontainermargin-435526">
+                    <div class="f-iconcontainer-435527">
+                      <div class="f-svg-435528">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19.8333 14.5833C18.4333 14.5833 17.0333 14.35 15.6333 13.8833C15.2833 13.7667 14.8833 13.8667 14.6167 14.1333L12.45 16.8333C8.98333 15.0667 6.13333 12.2167 4.36667 8.75L7.06667 6.58333C7.33333 6.31667 7.43333 5.91667 7.31667 5.56667C6.85 4.16667 6.61667 2.76667 6.61667 1.36667C6.61667 0.616667 6 0 5.25 0H1.36667C0.616667 0 0 0.616667 0 1.36667C0 12.1167 8.88333 21 19.6333 21C20.3833 21 21 20.3833 21 19.6333V15.75C21 15 20.3833 14.5833 19.8333 14.5833Z" fill="#008A45"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-textlabelsmargin-435530">
+                    <div class="f-textlabelsforemergencycontact-435531 text-node" data-orig-h="20">For Emergency Contact</div>
+                  </div>
+                  <div class="f-container-435532">
+                    <div class="f-text-435533 text-node" data-orig-h="32">+971 559967210</div>
+                  </div>
+                </div>
+                <div class="f-background-435534"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
