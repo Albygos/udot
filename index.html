@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Perfect Export</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 60px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.person-card-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.person-card-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
+.person-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.card-side-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Front Card exact styles */
+.f-backgroundshadow-4352475 {
+  position: relative;
+  width: 750px;
+  min-height: 420px;
+  height: 420px;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  margin: 0 auto;
+  overflow: hidden;
+}
+.f-udotreality-4352476 {
+  position: absolute;
+  left: 58.88px;
+  top: 46px;
+  width: 631px;
+  height: 329px;
+  box-sizing: border-box;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Back Card exact styles - WIDTHS INCREASED SO TEXT WONT OVERLAP AND BREAK THE CARD */
+.f-heading1nanthums-4352496 { position: absolute; left: 0px; top: 0px; width: 500px; min-height: 39px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 32px; line-height: normal; letter-spacing: -0.5px; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; color: rgba(26, 26, 26, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-ceo-4352497 { position: absolute; left: 0px; top: 43px; width: 500px; min-height: 24px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 20px; line-height: normal; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 600; color: rgba(44, 44, 44, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-vector-4352499 { position: absolute; left: 0px; top: 0px; width: 20px; height: 20px; box-sizing: border-box; display: block; object-fit: contain; }
+.f-vector-4353523 { position: absolute; left: 2.98px; top: 3.85px; width: 14px; height: 14px; box-sizing: border-box; display: block; object-fit: contain; }
+.f-whatsappphoneiconsvg-4352498 { position: absolute; left: 0px; top: 93px; width: 20px; height: 20px; box-sizing: border-box; overflow: hidden; }
+.f-919809081828-4352501 { position: absolute; left: 32px; top: 92px; width: 550px; min-height: 22px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 18px; line-height: normal; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; color: rgba(26, 26, 26, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-vector-4353543 { position: absolute; left: 0px; top: 2.5px; width: 20px; height: 15px; box-sizing: border-box; display: block; object-fit: contain; }
+.f-uiwmail-4353542 { position: absolute; left: 0px; top: 125px; width: 20px; height: 20px; box-sizing: border-box; overflow: hidden; }
+.f-msnanthuudotworld-4352504 { position: absolute; left: 32px; top: 122px; width: 550px; min-height: 22px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 18px; line-height: normal; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; color: rgba(26, 26, 26, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-topsectionpersonalinformation-4352495 { position: absolute; left: 50px; top: 45px; width: 650px; height: 144px; box-sizing: border-box; }
+.f-udothospitalitylifestyle-4352505 { position: absolute; left: 612.97px; top: 48px; width: 108px; height: 54px; box-sizing: border-box; display: block; object-fit: cover; overflow: hidden; }
+.f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 { position: absolute; left: 0px; top: 51px; width: 550px; min-height: 91.77px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 16.5px; line-height: 23.93px; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; color: rgba(26, 26, 26, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-wwwudotworld-4352508 { position: absolute; left: 502.53px; top: 121.69px; width: 200px; min-height: 22px; height: auto; box-sizing: border-box; margin: 0; padding: 0; display: flex; flex-direction: column; white-space: pre-wrap; word-break: normal; overflow: visible; font-size: 18px; line-height: normal; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-weight: 400; color: rgba(26, 26, 26, 1); text-align: left; align-items: flex-start; justify-content: center; }
+.f-bottomsectioncompanyinformation-4352506 { position: absolute; left: 50px; top: 229.31px; width: 650px; height: 145.69px; box-sizing: border-box; }
+.f-backgroundshadow-4352494 { position: relative; width: 750px; min-height: 420px; height: 420px; box-sizing: border-box; filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1)); background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)); margin: 0 auto; overflow: visible; }
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    gap: 20px;
+  }
+  .person-card-header, .card-side-label {
+    display: none;
+  }
+  .card-wrapper {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="person-card-group">
+      <h2 class="person-card-header">1. Abishek Narayanan - Udot</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 1: Abishek Narayanan Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 1: Abishek Narayanan Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Abishek Narayanan</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">Founder</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+971) 50 959 7829,<br/>(+91) 9995737829,<br/>(+255) 763009119</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">abishek@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UNITED DIMENSIONS OF TECHNOLOGY PRIVATE LIMITED<br/>No 4, 2nd Floor, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">2. Anagha Paleri - Udot</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 2: Anagha Paleri Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 2: Anagha Paleri Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Anagha Paleri</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">Co-Founder</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+971) 50 557 7829,<br/>(+91) 9656745070</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">anagha@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UNITED DIMENSIONS OF TECHNOLOGY PRIVATE LIMITED<br/>No 4, 2nd Floor, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">3. Roshita Aravindan - Udot India</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 3: Roshita Aravindan Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 3: Roshita Aravindan Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Roshita Aravindan</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">+91 9388891011</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">roshita@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UNITED DIMENSIONS OF TECHNOLOGY PRIVATE LIMITED<br/>No 4, 2nd Floor, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">4. Shafeeque Rahman - Udot Limited</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 4: Shafeeque Rahman Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot Limited Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 4: Shafeeque Rahman Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Shafeeque Rahman</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91) 8129168995<br/>(+255)749361463</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">shafeeq@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot Limited Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">Udot Limited<br/>Shop No.16, Seacliff Village, 10 Toure Drive, Msasani peninsula<br/>P O Box 3030 Dar es Salaam, Tanzania</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">5. Dinil NK - Udot Reality</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 5: Dinil NK Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/udot%20reality.jpeg" alt="Udot Reality Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 5: Dinil NK Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Dinil NK</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91) 9544354222</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">dinil@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/udot%20reality.jpeg" alt="Udot Reality Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UDOT REALITY PRIVATE LIMITED<br/>No 4, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udor.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">6. Mirshad TP - Comacon Technologies LLC</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 6: Mirshad TP Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/comacon.png" alt="Comacon Technologies LLC Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 6: Mirshad TP Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Mirshad TP</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+971)559967210<br/>(+91 9686994322</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">mirshad@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/comacon.png" alt="Comacon Technologies LLC Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">Comacon Technologies L.L.C-FZ<br/>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba,<br/>Dubai, U.A.E.</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.comacon.ae</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">7. Faisal Kuttukkan - Comacon Technologies LLC</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 7: Faisal Kuttukkan Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/comacon.png" alt="Comacon Technologies LLC Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 7: Faisal Kuttukkan Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Faisal Kuttukkan</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">Business Development Manager</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+971) 502963473<br/>(+91) 9895139422<br/>(+255) 790 567 005</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">faisal@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/comacon.png" alt="Comacon Technologies LLC Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">Comacon Technologies L.L.C-FZ<br/>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba,<br/>Dubai, U.A.E.</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.comacon.ae</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">8. Akshaya Paleri - Udot Edu</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 8: Akshaya Paleri Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/reality%20edu.jpeg" alt="Udot Edu Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 8: Akshaya Paleri Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Akshaya Paleri</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91) 6282420344</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">akshaya@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/reality%20edu.jpeg" alt="Udot Edu Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UDOT EDU PRIVATE LIMITED<br/>No. 4,1st Floor, Suite 101, Kirti Arcade, Outer Ring Road,<br/>Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">9. Firoz K - Udot Reality</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 9: Firoz K Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/udot%20reality.jpeg" alt="Udot Reality Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 9: Firoz K Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Firoz K</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">COO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91)9567330606</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">firozkanden@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/udot%20reality.jpeg" alt="Udot Reality Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UDOT REALITY PRIVATE LIMITED<br/>No 4, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">10. Abhinand Narayanan - Udot India</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 10: Abhinand Narayanan Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 10: Abhinand Narayanan Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Abhinand Narayanan</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">System Engineer (CI/CD)</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91)9747827132</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">abhinand@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UNITED DIMENSIONS OF TECHNOLOGY PRIVATE LIMITED<br/>No 4, 2nd Floor, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">11. Nanthu MS - UDOT Hospitality & Lifestyle</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 11: Nanthu MS Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/u%20dot%20hospitality.png" alt="UDOT Hospitality & Lifestyle Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 11: Nanthu MS Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Nanthu MS</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">CEO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91) 9809081828</div>
+          
+        <div class="f-uiwmail-4353542">
+          <img class="f-vector-4353543" data-filename="assets/vector_4353543.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTUgIiB2aWV3Qm94PSIwIDAgMjAgMTUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNy4xNzIgOC44MzRMMTAuMDAyIDEwLjc2OUwxMi43MyA4Ljg4N0wxOC44NDUgMTQuOTJDMTguNjgzNyAxNC45NzI3IDE4LjUxMzAgMTQuOTk5MyAxOC4zMzMgMTVIMS42NjdDMS40NDcgMTUgMS4yMzcgMTQuOTU3IDEuMDQ0IDE0Ljg4TDcuMTcyIDguODM0Wk0yMCAzLjg3NlYxMy4zMzNDMjAgMTMuNTgwIDE5Ljk0NiAxMy44MTQgMTkuODUgMTQuMDI1TDEzLjg1NiA4LjExMUwyMCAzLjg3NlpNMCAzLjkyOUw2LjA0MiA4LjA2MUwwLjEwNiAxMy45MTlDMC4wMzY0NjI4IDEzLjczMTQgMC4wMDA1Nzg5OTIgMTMuNTMzIDAgMTMuMzMzTDAgMy45MjlaTTE4LjMzMyAwQzE5LjI1MyAwIDIwIDAuNzQ2IDIwIDEuNjY3VjIuMjUzTDkuOTk4IDkuMTQ4TDAgMi4zMVYxLjY2N0MwIDAuNzQ3IDAuNzQ2IDAgMS42NjcgMEgxOC4zMzNaIiBmaWxsPSIjMTQ3QzU3Ii8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-msnanthuudotworld-4352504 text-node" data-orig-h="22">msnanthu@udot.world</div>
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/u%20dot%20hospitality.png" alt="UDOT Hospitality & Lifestyle Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UDOT HOSPITALITY AND LIFESTYLE PRIVATE LIMITED<br/>No. 4, 1st Floor, Suite 103, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="person-card-group">
+      <h2 class="person-card-header">12. Jithinraj KP - Udot India</h2>
+      <div class="person-cards-row">
+        <div class="card-wrapper">
+          <div class="card-side-label">Front</div>
+          
+      <!-- Person 12: Jithinraj KP Front -->
+      <div class="f-backgroundshadow-4352475">
+        <img class="f-udotreality-4352476" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+      </div>
+        </div>
+        <div class="card-wrapper">
+          <div class="card-side-label">Back</div>
+          
+      <!-- Person 12: Jithinraj KP Back -->
+      <div class="f-backgroundshadow-4352494">
+        <div class="f-topsectionpersonalinformation-4352495">
+          <div class="f-heading1nanthums-4352496 text-node" data-orig-h="39">Jithinraj KP</div>
+          <div class="f-ceo-4352497 text-node" data-orig-h="24">COO</div>
+          
+        <div class="f-whatsappphoneiconsvg-4352498">
+          <img class="f-vector-4352499" data-filename="assets/vector_4352499.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjY2NjcgMEgzLjMzMzMzQzEuNDkyMzggMCAwIDEuNDkyMzggMCAzLjMzMzMzVjE2LjY2NjdDMCAxOC41MDc2IDEuNDkyMzggMjAgMy4zMzMzMyAyMEgxNi42NjY3QzE4LjUwNzYgMjAgMjAgMTguNTA3NiAyMCAxNi42NjY3VjMuMzMzMzNDMjAgMS40OTIzOCAxOC41MDc2IDAgMTYuNjY2NyAwWiIgZmlsbD0iIzE0N0M1NyIvPgo8L3N2Zz4K" alt="Vector" />
+          <img class="f-vector-4353523" data-filename="assets/vector_4353523.svg" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjIxNTcgMTMuOTk5N0MxMC42MDU3IDEzLjk5OTcgOS43NDg4MSAxMy43NzkxIDguNDY1NjggMTMuMDYyMkM2LjkwNTM3IDEyLjE4NzIgNS42OTg0OSAxMS4zNzk0IDQuMTQ2NjIgOS44MzE1OEMyLjY1MDM3IDguMzM2MjcgMS45MjIyNCA3LjM2ODE1IDAuOTAzMTgxIDUuNTEzNzdDLTAuMjQ4MDY5IDMuNDIwMDIgLTAuMDUxODE4OCAyLjMyMjUyIDAuMTY3NTU2IDEuODUzNDZDMC40Mjg4MDYgMS4yOTI4MyAwLjgxNDQzMSAwLjk1NzUyMyAxLjMxMjg3IDAuNjI4NzFDMS41OTU5OCAwLjQzOTIyMSAxLjg5NTU4IDAuMjgwMjE2IDIuMjA3ODcgMC4xNDk3MUMyLjIzOTEyIDAuMTM2MjczIDIuMjY4MTggMC4xMjM0NiAyLjI5NDEyIDAuMTExODk4QzIuNDQ4ODEgMC4wNDIyMTAxIDIuNjgzMTggLTAuMDYzMTAyNCAyLjk4MDA2IDAuMDQ5Mzk3NkMzLjE3ODE4IDAuMTIzNzczIDMuMzU1MDYgMC4yNzU5NiAzLjYzMTkzIDAuNTQ5Mzk4QzQuMTk5NzQgMS4xMDk0IDQuOTc1NjggMi4zNTY1OSA1LjI2MTkzIDIuOTY5MDhDNS40NTQxMiAzLjM4MTkgNS41ODEzMSAzLjY1NDQgNS41ODE2MiAzLjk2MDAyQzUuNTgxNjIgNC4zMTc4MyA1LjQwMTYyIDQuNTkzNzcgNS4xODMxOCA0Ljg5MTU4QzUuMTQyMjQgNC45NDc1MiA1LjEwMTYyIDUuMDAwOTYgNS4wNjIyNCA1LjA1MjgzQzQuODI0NDMgNS4zNjUzMyA0Ljc3MjI0IDUuNDU1NjUgNC44MDY2MiA1LjYxNjlDNC44NzYzMSA1Ljk0MDk2IDUuMzk1OTkgNi45MDU2NSA2LjI1MDA2IDcuNzU3ODRDNy4xMDQxMiA4LjYxMDAyIDguMDQwOTkgOS4wOTY5IDguMzY2MzEgOS4xNjYyN0M4LjUzNDQzIDkuMjAyMjEgOC42MjY2MiA5LjE0NzgzIDguOTQ5MTIgOC45MDE1OEM4Ljk5NTM3IDguODY2MjcgOS4wNDI4NyA4LjgyOTcxIDkuMDkyNTYgOC43OTMxNUM5LjQyNTY4IDguNTQ1MzQgOS42ODg4MSA4LjM3MDAyIDEwLjAzODIgOC4zNzAwMkgxMC4wNDAxQzEwLjM0NDEgOC4zNzAwMiAxMC42MDQ0IDguNTAxOSAxMS4wMzU3IDguNzE5NEMxMS41OTgyIDkuMDAzMTUgMTIuODgyOSA5Ljc2OTA4IDEzLjQ0NjMgMTAuMzM3NUMxMy43MjA0IDEwLjYxMzggMTMuODczMiAxMC43OSAxMy45NDc5IDEwLjk4NzhDMTQuMDYwNCAxMS4yODU2IDEzLjk1NDQgMTEuNTE5MSAxMy44ODU0IDExLjY3NTNDMTMuODczOCAxMS43MDEzIDEzLjg2MSAxMS43Mjk3IDEzLjg0NzYgMTEuNzYxM0MxMy43MTYgMTIuMDczIDEzLjU1NjEgMTIuMzcyIDEzLjM2OTcgMTIuNjU0NEMxMy4wMzc2IDEzLjE1MTMgMTIuNzAxIDEzLjUzNiAxMi4xMzkxIDEzLjc5NzVDMTEuODUwNiAxMy45MzQgMTEuNTM0OCAxNC4wMDMyIDExLjIxNTcgMTMuOTk5N1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Vector" />
+        </div>
+        <div class="f-919809081828-4352501 text-node" data-orig-h="22">(+91</div>
+          
+        </div>
+        <img class="f-udothospitalitylifestyle-4352505" src="logos/Blakrot%20logo%20.png" alt="Udot India Logo" />
+        <div class="f-bottomsectioncompanyinformation-4352506">
+          <div class="f-udothospitalitylifestylepvtltdno41stfloorsuite102kirtiarcadeouterringroadmansinagarcrossmysorekarnataka-4352507 text-node" data-orig-h="91.77">UNITED DIMENSIONS OF TECHNOLOGY PRIVATE LIMITED<br/>No 4, 2nd Floor, Kirti Arcade, Outer Ring Road, Mansi Nagar Cross, Mysuru,570019, Karnataka, India</div>
+          <div class="f-wwwudotworld-4352508 text-node" data-orig-h="22">www.udot.world</div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  
+  <script>
+    window.addEventListener('load', () => {
+      // First, setup inline top styles based on CSS so script can read/modify them
+      document.querySelectorAll('.f-topsectionpersonalinformation-4352495 > div, .f-topsectionpersonalinformation-4352495 > img').forEach(el => {
+         const comp = window.getComputedStyle(el);
+         if (comp.position === 'absolute' && !el.style.top) {
+           el.style.top = comp.top;
+         }
+      });
+      document.querySelectorAll('.f-bottomsectioncompanyinformation-4352506 > div').forEach(el => {
+         const comp = window.getComputedStyle(el);
+         if (comp.position === 'absolute' && !el.style.top) {
+           el.style.top = comp.top;
+         }
+      });
+
+      document.querySelectorAll('.text-node').forEach(el => {
+        const origH = parseFloat(el.getAttribute('data-orig-h')) || el.clientHeight;
+        const actualH = el.getBoundingClientRect().height;
+
+        if (actualH > origH + 4) {
+          const deltaY = Math.ceil(actualH - origH);
+          const parent = el.parentElement;
+          if (parent) {
+            Array.from(parent.children).forEach(sibling => {
+              if (sibling === el) return;
+              if (sibling.style.position === 'absolute' && sibling.style.top) {
+                const currentTop = parseFloat(sibling.style.top);
+                const elTop = el.offsetTop;
+                if (!isNaN(currentTop) && currentTop >= elTop + origH - 4) {
+                  sibling.style.top = (currentTop + deltaY) + 'px';
+                }
+              }
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
